@@ -30,9 +30,10 @@ int	Fixed::getRawBits(void) const
 	return (this->_vf);
 }
 
-void	Fixed::operator=(const Fixed &fix)
+Fixed	&Fixed::operator=(const Fixed &fix)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &fix)
 		this->_vf = fix.getRawBits();
+	return (*this);
 }
