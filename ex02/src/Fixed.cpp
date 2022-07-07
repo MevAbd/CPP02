@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 01:20:19 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 05:45:32 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:28:14 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,41 @@ bool	Fixed::operator==(const Fixed &rhs)
 	return (this->toFloat() == rhs.toFloat());
 }
 
-Fixed	&Fixed::min
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
+{
+	Fixed	cpy_a(a);
+	Fixed	cpy_b(b);
+	if (cpy_a < cpy_b)
+		return (a);
+	else
+		return (b);
+}
+
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
+{
+	Fixed	cpy_a(a);
+	Fixed	cpy_b(b);
+	if (cpy_a > cpy_b)
+		return (a);
+	else
+		return (b);
+}
 
 std::ostream	&operator<<(std::ostream & o, Fixed const &fix)
 {

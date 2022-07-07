@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 01:20:08 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 04:58:41 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:18:14 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ class Fixed
 
 		Fixed	&operator=(const Fixed &rhs); 
 		Fixed	&operator++(void); 
-		Fixed	operator++(int); 
 		Fixed	&operator--(void); 
+
+		Fixed	operator++(int); 
 		Fixed	operator--(int); 
 		Fixed	operator+(const Fixed &rhs); 
 		Fixed	operator-(const Fixed &rhs); 

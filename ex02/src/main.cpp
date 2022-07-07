@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 02:11:15 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/07 04:53:34 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:28:46 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,17 @@ int	main(void)
 	std::cout << w << std::endl;
 	std::cout << "w++ = " << w.toFloat() << std::endl;
 	std::cout << "w++ = " << w.toInt() << std::endl;
+
+	e = e.min(f, g);
+	std::cout << "min " << f << " vs " << g << " = " << e << std::endl;
+	e = e.max(f, g);
+	std::cout << "max " << f << " vs " << g << " = " << e << std::endl;
+	
+	const Fixed	aa(1);
+	const Fixed	bb(3.141f);
+	const Fixed cc = cc.min(aa, bb);
+	std::cout << "min " << aa << " vs " << bb << " = " << cc << std::endl;
+	const Fixed dd = dd.max(aa, bb);
+	std::cout << "max " << aa << " vs " << bb << " = " << dd << std::endl;
 	return (0);
 }
