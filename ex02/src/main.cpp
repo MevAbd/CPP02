@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/07 02:11:15 by malbrand          #+#    #+#             */
+/*   Updated: 2022/07/07 04:53:34 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.class.hpp"
 
 int	main(void)
@@ -31,5 +43,79 @@ int	main(void)
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toFloat() << " as float" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
+	std::cout << std::endl << std::endl << std::endl;
+	Fixed		e;
+	Fixed		f(10);
+	Fixed		g(2.2f);
+	std::cout << "f is " << f.toFloat() << " as float" << std::endl;
+	std::cout << "f is " << g.toFloat() << " as float" << std::endl;
+	std::cout << "g is " << f.toInt() << " as integer" << std::endl;
+	std::cout << "g is " << g.toInt() << " as integer" << std::endl;
+	e = g + f;
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << "e is " << e.toFloat() << " as float" << std::endl;
+	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
+
+	e = e + f;
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << "e is " << e.toFloat() << " as float" << std::endl;
+	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
+
+
+	e = e - f;
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << "e is " << e.toFloat() << " as float" << std::endl;
+	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
+
+	e = f * f;
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << "e is " << e.toFloat() << " as float" << std::endl;
+	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
+
+	e = f / f;
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << "e is " << e.toFloat() << " as float" << std::endl;
+	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
+
+	std::cout << "10 > 2 = " << (f > g) << std::endl;
+	std::cout << "2 > 10 = " << (g > f) << std::endl;
+
+	std::cout << "10 < 2 = " << (f < g) << std::endl;
+	std::cout << "2 < 10 = " << (g < f) << std::endl;
+
+	std::cout << "10 >= 2 = " << (f >= g) << std::endl;
+	std::cout << "2 >= 10 = " << (g >= f) << std::endl;
+
+	std::cout << "2 >= 10 = " << (g >= f) << std::endl;
+	std::cout << "2 <= 10 = " << (g <= f) << std::endl;
+
+	std::cout << "10 == 2 = " << (f == g) << std::endl;
+	std::cout << "10 == 2 = " << (f == g) << std::endl;
+	std::cout << "10 == 10 = " << (f == f) << std::endl;
+
+	std::cout << "10 != 2 = " << (f == g) << std::endl;
+	std::cout << "10 != 2 = " << (f == g) << std::endl;
+	std::cout << "10 != 10 = " << (f == f) << std::endl;
+
+	Fixed	w(42.42f);
+	std::cout << "w = " << w.toFloat() << std::endl;
+	std::cout << "w = " << w.toInt() << std::endl;
+	++w;
+	std::cout << "w++ = " << w.toFloat() << std::endl;
+	std::cout << "w++ = " << w.toInt() << std::endl;
+	++w;
+	std::cout << "w++ = " << w.toFloat() << std::endl;
+	std::cout << "w++ = " << w.toInt() << std::endl;
+	w++;
+	std::cout << "w++ = " << w.toFloat() << std::endl;
+	std::cout << "w++ = " << w.toInt() << std::endl;
+	std::cout << w << std::endl;
+	std::cout << w++ << std::endl;
+	std::cout << w << std::endl;
+	std::cout << ++w << std::endl;
+	std::cout << w << std::endl;
+	std::cout << "w++ = " << w.toFloat() << std::endl;
+	std::cout << "w++ = " << w.toInt() << std::endl;
 	return (0);
 }

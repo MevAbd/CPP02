@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/07 03:02:44 by malbrand          #+#    #+#             */
+/*   Updated: 2022/07/07 03:04:55 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_CLASS_HPP
 # define FIXED_CLASS_HPP
 # include <iostream>
@@ -14,9 +26,10 @@ class Fixed
 		Fixed(const int n);
 		Fixed(const float n);
 		~Fixed(void);
-		Fixed	&operator=(const Fixed &fix); 
-		int	getRawBits(void) const;
-		int	toInt(void)const;
+		
+		Fixed	&operator=(Fixed const &rhs);
+		int		getRawBits(void) const;
+		int		toInt(void)const;
 		void	setRawBits(int const raw);
 		float	toFloat(void)const;
 };
